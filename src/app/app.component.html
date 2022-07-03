@@ -1,0 +1,62 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light  fixed-top px-4" [ngClass]="backClass">
+    <div class="container-fluid">
+      <a class="logo" href="#">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" [style.color]="color" [routerLink]='"."' fragment="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]='"."' [fragment]="'menu'"  [style.color]="color">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='"."' [fragment]="'service'"  [style.color]="color">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]='"."' [fragment]="'location'"  [style.color]="color">Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='"."' [fragment]="'about'"  [style.color]="color">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='"."' [fragment]="'contact'" [style.color]="color">Contact us</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+ 
+    <!-- <section class="main"> -->
+    <router-outlet></router-outlet>
+   
+  <!-- </section> -->
+  <footer>
+
+
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <div class="social-icons d-flex order-md-2">
+        <div class="m-1 ic"> <i class="fa-brands fa-facebook-square"></i></div>
+        <div class="m-1 ic"> <i class="fa-brands fa-twitter-square"></i></div>
+        <div class="m-1 ic"><i class="fa-brands fa-instagram-square"></i></div>
+        <div class="m-1 ic">   <i class="fa-brands fa-whatsapp-square"></i></div>
+       
+       
+        
+     
+      </div>
+      <div class="f-menu order-md-1">© Restaurant 2022. All rights reserved. </div>
+
+    </div>
+
+  </footer>
+</div>

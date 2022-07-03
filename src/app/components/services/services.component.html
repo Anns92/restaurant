@@ -1,0 +1,47 @@
+<div class="service" [@scrollAnimation]="state"  [attr.id]='"service"'>
+    <div class="common-title">
+        Services
+    </div>
+    <ng-container *ngFor="let data of services">
+
+        <div class="row mt-2 mt-md-4" *ngIf="data.position =='right'" >
+
+
+
+            <div class="col-12 col-md-6  order-2 order-md-1" >
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src={{data.img}} alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2" >
+                <div class="h-100 d-flex justify-content-center align-items-center">
+                    <div class="content">
+                        <div class="title">
+                            {{data.title}}
+                        </div>
+                        {{data.content}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" *ngIf="data.position =='left'">
+
+            <div class="col-12 col-md-6 ">
+                <div class="h-100 d-flex justify-content-center align-items-center">
+                    <div class="content">
+                        <div class="title">
+                            {{data.title}}
+                        </div>
+                        {{data.content}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 ">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src={{data.img}} alt="">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

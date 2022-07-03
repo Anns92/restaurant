@@ -1,0 +1,94 @@
+@import  '../../../assets/sass/index'
+.t-card
+    width: 20rem
+    height: 24rem
+    margin: 1rem
+    box-shadow: 0 0 15px -2px grey
+    -webkit-box-shadow: 0 0 15px -2px grey
+    border-radius: 15px
+    position: relative
+    margin-top: 7rem
+    @include md
+        width: 18rem
+        margin-left: auto
+        margin-right: auto
+    .thum-img
+        position: absolute
+        top: -5rem
+        width: 10rem
+        height: 10rem
+        object-fit: cover
+        object-position: center
+        -o-object-fit: cover
+        -o-object-position: center
+        border-radius: 50%
+        left: 50%
+        -webkit-transform: translateX(-50%)
+        -ms-transform: translateX(-50%)
+        transform: translateX(-50%)
+    .content
+        padding: 2rem
+        padding-top: 6rem
+        p
+            text-align: center
+            font-style: italic
+        .name
+            font-size: 0.8rem
+            font-weight: 800
+        svg
+            font-size: 1.5rem
+            color: purple
+::ng-deep
+    .testimonial
+        .owl-item:not(.center)
+            -webkit-transform: scale(0.8)
+            -ms-transform: scale(0.8)
+            transform: scale(0.8)
+            -webkit-transition: -webkit-transform 1s
+            transition: -webkit-transform 1s
+            -o-transition: transform 1s
+            transition: transform 1s
+            transition: transform 1s, -webkit-transform 1s
+::ng-deep  .testimonial
+    .owl-item
+        -webkit-transition: -webkit-transform 1s
+        transition: -webkit-transform 1s
+        -o-transition: transform 1s
+        transition: transform 1s
+        transition: transform 1s, -webkit-transform 1s
+::ng-deep  .testimonial
+    .owl-carousel
+        .owl-item.center
+            // z-index: 5
+            // display: flex
+            // justify-content: center
+
+.btn-arrow-left
+    position: absolute
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+    z-index: 100
+    font-size: 1.5rem
+    color: black
+    left: -10px
+    display: none
+.btn-arrow-right
+    position: absolute
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+    right: 0
+    z-index: 100
+    font-size: 1.5rem
+    color: black
+    display: none
+.testimonial
+    &:hover
+
+        .btn-arrow-right
+            display: block
+        .btn-arrow-left
+            display: block

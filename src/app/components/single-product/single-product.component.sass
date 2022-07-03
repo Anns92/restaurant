@@ -1,0 +1,31 @@
+@import ../../../assets/sass/index
+.single-product
+    padding: 0 6rem
+    height: 100vh
+    .img-section
+        margin: auto
+        img
+            width: 20rem
+            height: 20rem
+            object-fit: cover
+            object-position: center
+    .title
+        font-size: 2rem
+        font-weight: 700
+        margin-bottom: 1.5rem
+        text-transform: capitalize
+    .description
+        color: grey
+    .price
+        font-size: 1.2rem
+        font-weight: 800
+        margin-top: 1.5rem
+
+::ng-deep label.star
+    padding: 5px $im
+    font-size: 19px $im
+::ng-deep ngx-star-rating
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    margin-top: 0.5rem

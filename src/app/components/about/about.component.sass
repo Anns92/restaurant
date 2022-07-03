@@ -1,0 +1,57 @@
+@import  '../../../assets/sass/index'
+.about
+    margin: 3rem 0
+    .content
+        padding: 1rem 4rem
+        text-align: center
+        @include md
+           padding: 1rem
+.intro
+    .video-section
+        width: 30rem
+        height: 15.4rem
+        position: relative
+        @include xxlg
+            width: remWide(30)
+            height: remWide(15.4)
+        @include md
+            width: 100%
+            height: 12rem
+
+        img
+            width: inherit
+            height: inherit
+            position: absolute
+            top: 0
+            z-index: 9
+
+        .video
+            width: inherit
+            height: inherit
+            position: absolute
+            top: 0
+            z-index: 10
+            video
+                border-radius: 2rem
+                padding: 0.7rem
+                width: inherit
+                height: inherit
+                @include xxlg
+                    padding: remWide(0.7)
+                    border-radius: remWide(2)
+                @include md
+                    padding: 0.4rem
+
+    .content
+        .title
+            font-size: 3rem
+            font-weight: 600
+            color: white
+            @include xxlg
+                font-size: remWide(3)
+        .content
+            font-size: 2rem
+            font-weight: 600
+            color: white
+            @include xxlg
+                font-size: remWide(2)

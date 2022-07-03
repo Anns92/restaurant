@@ -1,0 +1,26 @@
+@import '../../../assets/sass/index'
+.service
+    margin: 3rem 0
+    font-size: 1rem
+    @include xxlg
+        margin: remWide(3) 0
+    img
+        width: 100%
+        height: 20rem
+        object-fit: cover
+        object-position: center
+        -o-object-fit: cover
+        -o-object-position: center
+        @include xxlg
+            height: remWide(20)
+    .content
+        padding: 1rem
+        font-size: 0.9rem
+        @include md
+            text-align: center
+        .title
+            font-size: 1.5rem
+            font-weight: 600
+            margin-bottom: 1rem
+            @include md
+                text-align: center

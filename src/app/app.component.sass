@@ -1,0 +1,117 @@
+@import ../assets/sass/index
+*
+    font-family: 'Roboto', sans-serif
+    margin: 0
+    padding: 0
+.logo
+    img
+        max-width: 5rem
+        height: 3rem
+        object-fit: contain
+        object-position: center
+        -o-object-fit: contain
+        -o-object-position: center
+        @include md
+            max-width: 2rem
+            height: 2rem
+        @include xxlg
+            max-width: remWide(5)
+            height: remWide(3)
+.navbar-nav
+    @include md
+        text-align: center
+.navbar-toggler
+    border: none
+    &:focus
+        box-shadow: none $im
+        -webkit-box-shadow: none $im
+    @include  md
+        color: white
+
+footer
+    background-color: black
+    padding: 2rem 3rem
+    .f-menu
+        font-size: 1rem
+        margin: 0 1.4rem
+        color: white
+        font-weight: bold
+        @include xxlg
+            font-size: remWide(1)
+            margin: remWide(0) remWide(1.4)
+        @include md
+            margin: auto
+            margin-top: 0.5rem
+            font-size: 0.7rem
+    .social-icons
+        font-size: 1.5rem
+        color: white
+        @include xxlg
+            font-size: remWide(1.5)
+        @include md
+            margin: auto
+        svg
+            -webkit-transition: all 500ms
+            -o-transition: all 500ms
+            transition: all 500ms
+           
+            &:hover
+                -webkit-transform: scale(1.2)
+                -ms-transform: scale(1.2)
+                transform: scale(1.2)
+                color: purple
+
+.main
+    position: absolute
+    top: 0
+    width: 100%
+
+::ng-deep .common-title
+    font-size: 3rem
+    font-weight: 800
+    text-align: center
+    text-transform: uppercase
+    color: purple
+    @include xxlg
+        font-size: remWide(3)
+    @include md
+        font-size: 1.6rem
+::ng-deep .navbar-light
+    @include md
+        background: black $im
+    .navbar-nav
+        .nav-link
+            color: white
+            font-weight: bold
+            -webkit-transition: -webkit-transform .2s
+            transition: -webkit-transform .2s
+            -o-transition: transform .2s
+            transition: transform .2s
+            transition: transform .2s, -webkit-transform .2s
+            &:hover
+                -webkit-transform: scale(1.1)
+                -ms-transform: scale(1.1)
+                transform: scale(1.1)
+            @include md
+                color: white $im
+    .navbar-collapse
+        @include md
+            margin-bottom: 1.5rem $im
+.bg-nav
+    color: black
+    box-shadow: 0 1px 11px -4px gray
+    -webkit-box-shadow: 0 1px 11px -4px gray
+    background: white
+    @include  md
+        background: black $im
+        color: white $im
+
+.ic
+    -webkit-transition: all 500ms
+    -o-transition: all 500ms
+    transition: all 500ms
+    &:hover
+        -webkit-transform: scale(1.2)
+        -ms-transform: scale(1.2)
+        transform: scale(1.2)
+        color: purple

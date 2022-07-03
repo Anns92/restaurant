@@ -1,0 +1,59 @@
+<div class="contact" [@scrollAnimation]="state"  [attr.id]='"contact"'>
+    <div class="common-title mb-2">
+        Contact Us
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+                <form [formGroup]="contact" (ngSubmit)="save()">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" formControlName="email" placeholder="E-Mail">
+                                <div *ngIf="email.invalid && (email.dirty ||  email.touched)" class="invalid-feedback d-block">
+                                    <div *ngIf="email.errors?.['required']">
+                                        This field is required.
+                                    </div>
+                                   
+            
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Default input" formControlName="subject"
+                                    placeholder="Subject">
+                                    <div *ngIf="email.invalid && (email.dirty ||  email.touched)" class="invalid-feedback d-block">
+
+                                    <div *ngIf="subject.errors?.['required']"  >
+                                        This field is required.
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" formControlName="comment"
+                            placeholder="Message"></textarea>
+                            <div *ngIf="email.invalid && (email.dirty ||  email.touched)" class="invalid-feedback d-block">
+
+                            <div *ngIf="comment.errors?.['required']"  >
+                                This field is required.
+                            </div>
+                            </div>
+                          
+                    </div>
+                    <button type="submit" class="btn btn-sumbit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6">
+            <img class="contact-img" src="assets/img/contact.png" alt="">
+        </div>
+    </div>
+
+</div>

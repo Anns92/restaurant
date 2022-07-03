@@ -1,0 +1,55 @@
+@import  '../../../assets/sass/index'
+
+.nav-pills
+    .nav-link.active
+        background: transparent
+        border-radius: 0
+        border-bottom: 2px solid gray
+        color: black
+        font-weight: 800
+    .nav-link
+        color: black
+.menu
+    .m-card
+        width: 20rem
+
+        padding: 0.5rem
+        margin: 1rem
+        &:hover
+            -webkit-box-shadow: 0 0 24px -5px grey
+            box-shadow: 0 0 24px -5px grey
+        .img-section
+            display: flex
+            justify-content: center
+            img
+                width: 95%
+                height: 12rem
+                -o-object-fit: cover
+                object-fit: cover
+                -o-object-position: center
+                object-position: center
+                border-radius: 10px
+                @include  xxlg
+                    height: remWide(12)
+        .content
+            padding: 1rem
+            .title
+                font-size: 1rem
+                font-weight: 800
+                padding-top: 1rem
+                text-align: center
+                @include  xxlg
+                    font-size: remWide(1)
+            .description
+                font-size: 0.9rem
+                color: gray
+                text-align: center
+                margin-top: 1rem
+                height: 4rem
+            .price
+                font-size: 1.2rem
+                font-weight: bold
+                margin-top: 1rem
+                text-align: center
+    ul#pills-tab
+        justify-content: center

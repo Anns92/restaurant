@@ -1,0 +1,42 @@
+<div class="offers" [@scrollAnimation]="state">
+  <div class="common-title">
+    Offers
+ </div>
+  <div class="position-relative">
+    <owl-carousel-o [options]="customOptions" #owlCar>
+
+      <ng-template carouselSlide *ngFor="let data of offers">
+        <div class="offer-card">
+          <div class="discount">
+            {{data.discount}}%
+          </div>
+          <div class="img">
+            <img src={{data.img}} alt="">
+          </div>
+          <div class="content">
+
+            <div class="title">{{data.name}}</div>
+            <div class="description">{{data.description}}</div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="price">
+               ${{data.price}}
+              </div>
+              <div class="price offer-price">
+                ${{data.offer_price}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+   
+
+    </owl-carousel-o>
+
+    <div class="arrows">
+      <a class="btn-arrow-left" (click)="owlCar.prev()">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <a class="btn-arrow-right" (click)="owlCar.next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="testimonial">
+    <div class="common-title">
+        What our customers say
+    </div>
+    <div class="position-relative">
+        <owl-carousel-o [options]="customOptions" #owlCar>
+            <ng-template carouselSlide *ngFor="let data of testimonial">
+                <div class="t-card">
+                    <img src={{data.img}} alt="" class="thum-img" >
+                   
+                    <div class="content">
+                        <i class="fa fa-quote-left " aria-hidden="true"></i>
+                        <p>
+                       {{data.content}}</p>
+                        <div class="name text-end">
+                          {{data.author}}
+                        </div>
+                    </div>
+                  
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+
+        <div class="arrows">
+            <a class="btn-arrow-left" (click)="owlCar.prev()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a class="btn-arrow-right" (click)="owlCar.next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
